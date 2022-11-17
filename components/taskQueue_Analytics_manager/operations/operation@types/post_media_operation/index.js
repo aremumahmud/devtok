@@ -9,9 +9,11 @@ const operation_model = model.resolve('post_operation')
  * @descrp
  */
 
-function createPostOperation(mediaUrl) {
+function createPostOperation(config) {
     return new operation_model({
-        mediaUrl,
+        mediaUrl: config.mediaUrl,
+        userId: config.userId,
+        socketId: config.socketId,
         time: new Date(),
         status: 'pending'
     })

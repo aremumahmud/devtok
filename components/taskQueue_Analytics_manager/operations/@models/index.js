@@ -1,5 +1,5 @@
 const operationClass = require('./operationClass')
-
+const modelConfigs = require('./modelConfigs')
 
 
 class Models {
@@ -21,4 +21,4 @@ class Models {
 }
 
 
-module.exports = new Models(modelConfig)
+module.exports = new Models(modelConfigs)

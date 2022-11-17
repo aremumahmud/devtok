@@ -9,6 +9,7 @@ class postOperation {
         db.postMedia({
             uri: this.config.mediaUrl,
             date: this.config.time,
+            user: this.config.user
         }).then(res => {
             callback(null, res)
         }).catch(err => {

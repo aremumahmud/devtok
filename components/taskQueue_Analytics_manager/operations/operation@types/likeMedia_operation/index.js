@@ -10,9 +10,11 @@ const operation_model = model.resolve('like_operation')
  * @descrp
  */
 
-function createLikeOperation(mediaId) {
+function createLikeOperation(config) {
     return new operation_model({
-        mediaId,
+        mediaId: config.mediaId,
+        userId: config.userId,
+        socketId: config.socketId,
         time: new Date(),
         status: 'pending'
     })

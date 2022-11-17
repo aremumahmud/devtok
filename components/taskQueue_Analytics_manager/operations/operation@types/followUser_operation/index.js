@@ -10,9 +10,11 @@ const operation_model = models.resolve('follow_operation')
  * @descrp
  */
 
-function createFollowOperation(userId) {
+function createFollowOperation(config) {
     return new operation_model({
-        userId,
+        userId: config.userId,
+        devId: config.devId,
+        socketId: config.socketId,
         time: new Date(),
         status: 'pending'
     })

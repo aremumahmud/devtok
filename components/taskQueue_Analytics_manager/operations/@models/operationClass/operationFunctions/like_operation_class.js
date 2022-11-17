@@ -1,8 +1,8 @@
 const db = require('../../../../db_service_component')
 
 class likeOperation {
-    constructor() {
-
+    constructor(config) {
+        this.config = config
     }
 
     exec(callback) {
